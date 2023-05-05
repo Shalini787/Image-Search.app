@@ -1,0 +1,112 @@
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 2;
+    margin: 0;
+}
+h1{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px 0px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    /* flex-wrap: wrap; */
+}
+#search-input{
+    /* margin-bottom: 50px; */
+    font-size: 17px;
+    padding: 10px 20px;
+    width: 70%;
+    max-width: 400px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    border-radius: 7px;
+    color: rgb(127, 125, 125);
+}
+#search-button{
+    /* margin-bottom: 50px; */
+    padding: 10px 20px;
+    background-color: rgb(55, 161, 55);
+    color: white;
+    font-size: 17px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    border-radius: 7px;
+    transition: background-color .3s ease-in-out;
+}
+#search-button:hover{
+    background-color: rgb(2, 83, 2);
+}
+.search-results{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;  
+    margin: 0 auto;
+    padding: 20px;
+}
+.single-search-result{
+    margin-bottom: 50px;
+    width: 30%;
+    border-radius: 7px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    /* here image was overlappping the border radius from top so isliye humne overflow:hidden kiyaa */
+    overflow: hidden;
+}
+.single-search-result:hover img{
+    transform: scale(1.1);
+}
+.single-search-result img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform .3s ease-in-out;
+}
+.single-search-result a{
+    padding: 10px;
+    display: block;
+    color: rgb(88, 85, 85);
+    text-decoration: none;
+    transition: background-color .3s ease-in-out;
+}
+.single-search-result:hover a{
+    background-color: rgb(147, 135, 135);
+}
+#show-more-button{
+    background-color: rgb(76, 76, 239);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+    display: none;
+}
+#show-more-button:hover{
+    background-color: rgb(2, 2, 107);
+}
+@media screen and (max-width:700px) {
+    .single-search-result{
+        width: 45%;
+    }
+}
+@media screen and (max-width:480px) {
+    .single-search-result{
+        width: 100%;
+    }
+    form{
+        flex-direction: column;
+    }
+    #search-input{
+        margin-bottom: 20px;
+        width: 80%;
+    }
+}
